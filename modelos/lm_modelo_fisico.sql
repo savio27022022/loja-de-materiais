@@ -3,9 +3,7 @@ CREATE SCHEMA IF NOT EXISTS LojaDeMateriais;
 -- Utilizar o banco
 USE LojaDeMateriais;
 
--- -----------------------------------------------------
 -- Criar tabela para fornecedores
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS fornecedor (
   fornecedor_id INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NULL,
@@ -16,9 +14,7 @@ CREATE TABLE IF NOT EXISTS fornecedor (
   PRIMARY KEY (fornecedor_id)
 );
 
--- -----------------------------------------------------
 -- Criar tabela para categorias de produto
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS categoria_produto (
   categoria_produto_id INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NULL,
@@ -26,9 +22,7 @@ CREATE TABLE IF NOT EXISTS categoria_produto (
   PRIMARY KEY (categoria_produto_id)
 );
 
--- -----------------------------------------------------
 -- Criar tabela para produtos
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS produto (
   produto_id INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NULL,
@@ -42,9 +36,7 @@ CREATE TABLE IF NOT EXISTS produto (
   FOREIGN KEY (fornecedor_id) REFERENCES fornecedor(fornecedor_id)
 );
 
--- -----------------------------------------------------
 -- Criar tabela para movimentação de produtos
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS movimentacao (
   movimentacao_id INT NOT NULL AUTO_INCREMENT,
   tipo_fluxo VARCHAR(10) NULL,
@@ -62,11 +54,16 @@ CREATE TABLE IF NOT EXISTS movimentacao (
 -- Criando categorias de produtos
 INSERT INTO categoria_produto(nome, descricao)
 VALUES 
+-- Tintas
 ("Tintas", "Produtos destinados à pintura e acabamento"),
+-- Ferramentas
 ("Ferramentas", "Instrumentos para construção e manutenção"),
+-- Materiais
 ("Materiais", "Produtos diversos para construção e reforma"),
-("Eletrica", "Produtos e materiais para instalações elétricas"),
-("Hidraulica", "Materiais para instalações hidráulicas e encanamento");
+-- Elétrica
+("Elétrica", "Produtos e materiais para instalações elétricas"),
+-- Hidráulica
+("Hidráulica", "Materiais para instalações hidráulicas e encanamento");
 
 -- Criando fornecedores
 INSERT INTO fornecedor(nome, descricao, email, telefone, cep)
