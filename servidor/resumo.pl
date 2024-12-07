@@ -19,6 +19,10 @@ chomp($status);
 
 if ($status eq "active") {
     print "O servidor está ativo.\n";
+    my $cmd_mysql_server_url = "ss -tulnp | grep mysql"; 
+    my $mysql_server_url = `$cmd_mysql_server_url`;
+    chomp($mysql_server_url);
+    print "URL: $mysql_server_url";
 }
 elsif ($status eq "inactive") {
     print "O servidor está inativo.\n";
