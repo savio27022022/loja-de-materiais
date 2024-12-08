@@ -8,9 +8,9 @@ public class TestarConexao
 {
 	public static void main(String[] args) throws SQLException
 	{
-    // String base para conexão
+    		// String base para conexão
 		final String url = "jdbc:mysql//localhost:3306?verifyServerCertificate=false&useSSL=true";
-    // Inserir credenciais do banco
+    		// Inserir credenciais do banco
 		final String usuario = "";
 		final String senha = "";
 		Connection conexao = DriverManager
