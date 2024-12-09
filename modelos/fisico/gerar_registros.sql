@@ -3,11 +3,11 @@ USE LojaDeMateriais;
 -- Registrar fornecedores
 INSERT INTO fornecedor (nome, email, telefone, logradouro, bairro, cidade, estado)
 VALUES 
-('Construmax Materiais', 'construmax@exemplo.com.br', '1111-1111', 'Rua das Flores, 45', 'Centro', 'São Paulo', 'SP'),
-('Le Home Center', 'lehomecenter@exemplo.com.br', '2222-2222', 'Avenida Paulista, 1000', 'Jardins', 'São Paulo', 'SP'),
-('RJ Construções', 'rjconstrucoes@exemplo.com.br', '3333-3333', 'Rua General Câmara, 205', 'Centro', 'Rio de Janeiro', 'RJ'),
-('Casa dos Materiais', 'casadosmateriais@exemplo.com.br', '4444-4444', 'Avenida dos Eucaliptos, 450', 'Floresta', 'Porto Alegre', 'RS'),
-('Materiais São Jorge', 'materiaissaojorge@exemplo.com.br', '5555-5555', 'Rua do Sol, 118', 'Boa Vista', 'Recife', 'PE');
+('Construmax Materiais', 'construmax@exemplo.com.br', '1111-1111', 'Rua A', 'Centro', 'São Paulo', 'SP'),
+('Le Home Center', 'lehomecenter@exemplo.com.br', '2222-2222', 'Rua B', 'Jardins', 'São Paulo', 'SP'),
+('RJ Construções', 'rjconstrucoes@exemplo.com.br', '3333-3333', 'Rua C', 'Centro', 'Rio de Janeiro', 'RJ'),
+('Casa dos Materiais', 'casadosmateriais@exemplo.com.br', '4444-4444', 'Rua D', 'Floresta', 'Porto Alegre', 'RS'),
+('Materiais São Jorge', 'materiaissaojorge@exemplo.com.br', '5555-5555', 'Rua E', 'Boa Vista', 'Recife', 'PE');
 
 -- Registrar categorias
 INSERT INTO categoria (nome, descricao)
