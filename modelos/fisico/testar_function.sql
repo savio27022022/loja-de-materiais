@@ -2,4 +2,9 @@
 USE LojaDeMateriais;
 
 -- Exemplo de uso
-SELECT produtos_disponiveis_na_categoria(3) AS qtd_produtos_disponiveis;
+SELECT *
+FROM produto
+WHERE categoria_id = 3
+AND quantidade_disponivel > 0
+ORDER BY nome_produto
+LIMIT 50;
